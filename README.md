@@ -32,4 +32,4 @@ where N is the number of a player
 
 then open http://127.0.0.1:8080/statistic to see a summary of the results
 ```
-<!-- Note: Considered somewhat vague, the app was made under the assumption that the query parameter used on each call is the number recieved from the previous call to ELK no matter the player it was made from. -->
+* Note: Considered somewhat vague, the app was made under the assumption that the query parameter used on each call is the number recieved from the previous call to ELK no matter the player it was made from. *
