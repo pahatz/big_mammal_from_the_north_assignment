@@ -7,6 +7,7 @@ import (
     "encoding/xml"
     "io/ioutil"
     "strconv"
+    "time"
 )
 
 /*
@@ -31,7 +32,10 @@ var Temp_number Numbers
 var Last_num = 0 // holding query paramater of last call
 
 func getXML(url string) ([]byte, error) {
-	resp, err := http.Get(url)
+    var client = &http.Client{
+        Timeout: time.Second * 10,
+    }
+	resp, err := client.Get(url)
 	if err != nil {
         return []byte{}, fmt.Errorf("GET error: %v", err)
     }
